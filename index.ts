@@ -83,6 +83,7 @@ const responses = await Promise.all(
       const images = await cont.$$eval("img", (imgs) =>
         imgs.map((img) => img.src).filter((src) => !src.includes("spacer.gif"))
       );
+      await page.close();
       return {
         name,
         latin,
@@ -92,6 +93,7 @@ const responses = await Promise.all(
     }
   })
 );
+
 await browser.close();
 
 await fs.writeFile("./out/tree.json", JSON.stringify(responses));

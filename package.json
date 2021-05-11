@@ -5,15 +5,18 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --loader ts-node/esm ./index.ts"
+    "start": "node --loader ts-node/esm ./index.ts",
+    "make": "node --loader ts-node/esm ./make.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^2.6.1",
     "ts-node": "^9.1.1"
   },
   "devDependencies": {
+    "@types/node-fetch": "^2.5.10",
     "playwright": "^1.10.0",
     "typescript": "^4.2.4"
   },
